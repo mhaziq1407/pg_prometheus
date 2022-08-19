@@ -5,7 +5,7 @@ SQL_FILES = sql/prometheus.sql
 
 EXT_VERSION = $(shell cat pg_prometheus.control | grep 'default' | sed "s/^.*'\(.*\)'$\/\1/g")
 EXT_SQL_FILE = sql/$(EXTENSION)--$(EXT_VERSION).sql
-PG_VER=pg11
+PG_VER=pg14
 TIMESCALEDB_VER=1.6.1
 
 DATA = $(EXT_SQL_FILE)
